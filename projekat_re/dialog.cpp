@@ -13,7 +13,7 @@ Dialog::Dialog(QWidget *parent)
     //myTimer1->start(1000);
     lcd = lcdInit(2, 16, 4, RS, EN, D0, D1, D2, D3, D0, D1, D2, D3);
     lcdHome(lcd);
-
+    lcdClear(lcd);
     series=new QLineSeries();
 
 
@@ -23,7 +23,7 @@ Dialog::Dialog(QWidget *parent)
     chart->createDefaultAxes();
     chart->axisX()->setMin(0);
     chart->axisX()->setMax(20);
-    chart->axisY()->setRange(15,30);
+    chart->axisY()->setRange(25,35);
     chart->setTitle("Merenje temperature");
     chartView =new QChartView(chart);
     chartView->setRenderHint(QPainter::Antialiasing);
