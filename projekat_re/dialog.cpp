@@ -69,6 +69,8 @@ void Dialog::function1()
     //printf("\n Merenje \tTemp = %.3f\xC2\xB0 C",temperatura());
     lcdPosition(lcd, 0, 0);
     lcdPrintf(lcd,"%.3f 'C",temp_var);
+    lcdPosition(lcd, 0, 1);
+    lcdPrintf(lcd,"th1: %d th2: %d",floor,ceiling);
     ui->lcdNumber->display(temp_var);
             if(temp_var>ceiling)
             {
